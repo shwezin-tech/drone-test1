@@ -8,3 +8,6 @@ platform:
 steps:
 - name: test
   image: golang:1.14.4
+  commands:
+  - go build
+  - go test
