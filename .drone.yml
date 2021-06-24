@@ -15,9 +15,3 @@ steps:
   - go build
   - go test
   
-- name: frontend
-  image: node
-  commands:
-  - npm install
-  - npm test
-
