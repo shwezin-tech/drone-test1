@@ -1,16 +1,10 @@
+---
 kind: pipeline
 type: docker
-name: default
-
+name: linux-amd64
+platform:
+  arch: amd64
+  os: linux
 steps:
-- name: backend
-  image: golang
-  commands:
-  - go build
-  - go test
-
-- name: frontend
-  image: node
-  commands:
-  - npm install
-  - npm test
+- name: test
+  image: golang:1.14.4
