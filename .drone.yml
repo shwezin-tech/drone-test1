@@ -6,8 +6,5 @@ platform:
   arch: amd64
   os: linux
 steps:
-- name: backend
-  image: golang
-  commands:
-  - go build
-  - go test
+- name: test
+  image: golang:1.14.4
