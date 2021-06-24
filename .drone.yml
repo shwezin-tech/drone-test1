@@ -12,9 +12,6 @@ steps:
   environment:
     GOOS: linux
     GOARCH: amd64
-  commands:
-  - go build
-  - go test
     
 - name: notify
   image: plugins/slack
