@@ -11,3 +11,13 @@ steps:
   environment:
     GOOS: linux
     GOARCH: amd64
+  commands:
+  - go build
+  - go test
+  
+- name: frontend
+  image: node
+  commands:
+  - npm install
+  - npm test
+
