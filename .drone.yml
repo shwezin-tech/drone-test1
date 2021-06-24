@@ -12,6 +12,9 @@ steps:
   environment:
     GOOS: linux
     GOARCH: amd64
+    when:
+    branch:
+    - master
     
 - name: notify
   image: plugins/slack
