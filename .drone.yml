@@ -3,6 +3,9 @@ kind: pipeline
 type: docker
 name: default
 
+workspace:
+path: /drone/src
+
 steps:
   - name: lint
     image: python:3.7-alpine
