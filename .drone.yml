@@ -23,6 +23,7 @@ steps:
     - success
   
   
-  trigger:
-  branch:
-  - branch1
+trigger:
+  event:
+    exclude:
+    - push
