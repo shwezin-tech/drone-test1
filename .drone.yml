@@ -1,10 +1,9 @@
----
 kind: pipeline
 type: docker
 name: default
 
 steps:
-- name: fetch
+- name: submodules
   image: alpine/git
   commands:
-  - git fetch --tags
+  - git submodule update --init --recursive
