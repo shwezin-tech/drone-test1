@@ -21,6 +21,9 @@ steps:
     status:
     - failure
     - success
+    
+clone:
+  depth: 50
   
 trigger:
   repo:
