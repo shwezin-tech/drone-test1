@@ -8,7 +8,7 @@ platform:
 steps:
 - name: test
   image: golang:1.14.4
-  detach: false
+  privileged: true
   failure: ignore
   environment:
     GOOS: linux
