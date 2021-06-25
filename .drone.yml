@@ -1,27 +1,16 @@
----
 kind: pipeline
 type: docker
-name: linux-amd64
-platform:
-  arch: amd64
-  os: linux
+name: default
+
 steps:
-- name: test
-  image: golang:1.14.4
+- name: backend
+  image: golang
   commands:
   - go build
   - go test
-  failure: ignore
-  environment:
-    GOOS: linux
-    GOARCH: amd64
-    
-- name: notify
-  image: plugins/slack
-  settings:
-    webhook: https://hooks.slack.com/services/...
-    when:
-    status:
-    - failure
-    - success
-  
+
+- name: frontend
+  image: node
+  commands:
+  - npm install
+  - npm test
