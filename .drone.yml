@@ -22,8 +22,7 @@ steps:
     - failure
     - success
   
-  
 trigger:
-  event:
+  repo:
     exclude:
-    - push
+    - Drone-Testin-Dev/drone-test1
