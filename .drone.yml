@@ -22,3 +22,7 @@ steps:
     - failure
     - success
   
+  
+  trigger:
+  branch:
+  - branch1
