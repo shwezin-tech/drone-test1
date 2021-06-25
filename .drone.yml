@@ -9,8 +9,8 @@ steps:
 - name: test
   image: golang:1.14.4
   commands:
-  - npm install
-  - npm test
+  - go build
+  - go test
   failure: ignore
   environment:
     GOOS: linux
