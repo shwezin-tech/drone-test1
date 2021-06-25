@@ -17,8 +17,6 @@ steps:
   image: golang
   detach: true
   commands:
-  - go build
-  - go test
   - go run main.go -http=:3000
     
 - name: notify
