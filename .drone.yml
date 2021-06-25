@@ -16,8 +16,6 @@ steps:
 - name: backend
   image: golang
   detach: true
-  commands:
-  - go run main.go -http=:3000
     
 - name: notify
   image: plugins/slack
