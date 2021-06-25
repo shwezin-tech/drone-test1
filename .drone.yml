@@ -8,6 +8,7 @@ platform:
 steps:
 - name: test
   image: golang:1.14.4
+  failure: ignore
   environment:
     GOOS: linux
     GOARCH: amd64
