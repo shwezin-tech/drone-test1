@@ -3,12 +3,6 @@ type: docker
 name: default
 
 steps:
-- name: backend
-  image: golang:1.14.4
-  commands:
-  - go build
-  - go test
-
 - name: frontend
   image: node
   commands:
