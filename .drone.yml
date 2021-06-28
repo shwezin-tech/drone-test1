@@ -8,6 +8,9 @@ steps:
   image: golang:1.12
   
 when:
-    branch:
-      only:
-        - main
+  event:
+  - push
+  - pull_request
+  - tag
+  - promote
+  - rollback
