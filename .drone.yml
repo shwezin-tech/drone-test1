@@ -6,3 +6,8 @@ steps:
 - name: build
   pull: always
   image: golang:1.12
+  
+when:
+    branch:
+      only:
+        - main
