@@ -8,6 +8,6 @@ steps:
   image: golang:1.12
   
 when:
-  event:
-    include:
-    - push
+  repo:
+    exclude:
+    - Drone-Testin-Dev/drone-test1
