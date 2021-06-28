@@ -9,8 +9,5 @@ steps:
   
 when:
   event:
-  - push
-  - pull_request
-  - tag
-  - promote
-  - rollback
+    include:
+    - push
