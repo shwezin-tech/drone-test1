@@ -10,10 +10,6 @@ steps:
   - npm run test
   - npm run bundle
 
-- name: deploy
-  image: plugins/ssh
-  settings: ...
-
 trigger:
   event:
   - promote
