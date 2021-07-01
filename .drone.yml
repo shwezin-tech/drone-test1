@@ -1,6 +1,6 @@
 kind: pipeline
 type: docker
-name: default
+name: deploy
 
 steps:
 - name: test
@@ -10,8 +10,11 @@ steps:
   - npm run test
   - npm run bundle
 
-trigger:
-  event:
-  - promote
-  target:
-  - production
+- name: deploy
+  image: plugins/ssh
+  settings: ...
+  when:
+    event:
+    - promote
+    target:
+    - production
