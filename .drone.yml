@@ -1,23 +1,21 @@
 kind: pipeline
+type: docker
 name: default
 
 steps:
-- name: foo
-  image: alpine:3.8
-  volumes:
-  - name: m2
-    path: /root/.m2
+- name: test
+  image: node
   commands:
-  - touch /root/.m2/foo.txt
+  - npm install
+  - npm run test
+  - npm run bundle
 
-- name: bar
-  image: alpine:3.8
-  volumes:
-  - name: m2
-    path: /root/.m2
-  commands:
-  - ls /root/.m2/
+- name: deploy
+  image: plugins/ssh
+  settings: ...
 
-volumes:
-- name: m2
-  temp: {}
+trigger:
+  event:
+  - promote
+  target:
+  - production
