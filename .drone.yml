@@ -1,14 +1,17 @@
+---
 kind: pipeline
+type: docker
 name: default
 
 steps:
 - name: build
-  image: alpine
-  environment:
-    USERNAME:
-      from_secret: username
+  image: golang
+  commands:
+  - go build
+  - go test
 
 ---
-kind: secret
-name: username
-data: MAfl5fxBkAzxfcZfKGa+gz8/N++UJ8blfJr17BVnNc0sdo62h5tJBg42nw==
+kind: signature
+hmac: F10E2821BBBEA527EA02200352313BC059445190
+
+...
