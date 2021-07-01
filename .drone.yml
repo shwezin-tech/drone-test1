@@ -1,6 +1,23 @@
 kind: pipeline
 type: docker
-name: default
+name: build
+
+steps:
+- name: test
+  image: node
+  commands:
+  - npm install
+  - npm run test
+
+trigger:
+  event:
+  - push
+  - pull_request
+
+---
+kind: pipeline
+type: docker
+name: deploy
 
 steps:
 - name: test
