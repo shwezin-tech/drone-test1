@@ -6,7 +6,7 @@ steps:
 - name: webhook
   image: myathsu/drone-test:plugin
   settings:
-    url: testing.com
+    url: google.com
     method: post
     body: |
       hello world
