@@ -4,7 +4,7 @@ name: default
 
 steps:
 - name: webhook
-  image: acme/webhook
+  image: myathsu/drone-test:plugin
   settings:
     url: http://hook.acme.com
     method: post
