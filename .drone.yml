@@ -1,12 +1,28 @@
+---
 kind: pipeline
-type: docker
-name: default
+name: greeting
 
 steps:
-- name: webhook
-  image: myathsu/drone-test:plugin
-  settings:
-    url: google.com
-    method: post
-    body: |
-      hello world
+- name: en
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+
+- name: es
+  image: alpine
+  commands:
+  - echo hola
+  - echo mundo
+
+- name: fr
+  image: alpine
+  commands:
+  - echo bonjour
+  - echo monde
+
+---
+kind: signature
+hmac: afe85aa7640943bd407f56ad29670c3b62b84d79be5ab4d1e4e2ceee291024c7
+
+...
