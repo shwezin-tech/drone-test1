@@ -8,7 +8,6 @@ Steps:
   image: plugins/slack
   settings:
     webhook:
-      from_secret: slack-webhook
-      username: Drone
+      from_secret: SlackWebhook
       template: >
       {{repo.name}}/{{build.branch}} - #{{build.number}} {{uppercasefirst build.status}} after {{since build.started}} (<{{build.link}}|Open>)
