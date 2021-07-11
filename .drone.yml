@@ -1,6 +1,17 @@
+---
 kind: pipeline
-name: default
+name: node6
 
 steps:
 - name: test
-  image: node
+  image: node:6
+
+---
+kind: pipeline
+name: node8
+
+steps:
+- name: test
+  image: node:8
+
+...
