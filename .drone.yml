@@ -2,8 +2,8 @@ kind: pipeline
 name: default
 
 steps:
-- name: install
-  image: composer
-
 - name: test
-  image: php:7
+  image: node
+  commands:
+  - npm install
+  - npm test
