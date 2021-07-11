@@ -3,4 +3,4 @@ name: default
 
 steps:
 - name: test
-  image: node
+  image: node:10
